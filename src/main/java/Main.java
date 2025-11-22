@@ -51,12 +51,12 @@ public class Main {
      */
     public static Object[] removeDuplicatesFromArray(int[] array) {
         ArrayList<Integer> newArray = new ArrayList<>();
+        Arrays.sort(array);
         int currentItem = array[0];
         newArray.add(currentItem);
-        Arrays.sort(array);
         for(int i = 1; i < array.length; i++){
             if(array[i] != currentItem){
-                currentItem = i;
+                currentItem = array[i];
                 newArray.add(currentItem);
             }
         }
